@@ -40,6 +40,9 @@ public class Product {
     public String add() {
         System.out.println("Product inserted...");
         System.out.println(name + " " + qty + " " + price);
+        if (qty > 10) {
+            return "fail";
+        }
         return "success";
     }
 }
