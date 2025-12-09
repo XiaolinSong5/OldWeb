@@ -10,5 +10,23 @@
 </h:head>
 <h:body>
     <h2>JSF 2.0 Hello World Example - hello.xhtml</h2>
+    <h:form>
+        <h:outputLabel for="txtName">
+            <h:outputText value="enter product name"/>
+        </h:outputLabel>
+        <h:inputText id="txtName" value="#{obj.name}" />
+        <br/>
+        <h:outputLabel for="txtQty">
+            <h:outputText value="enter product qty"/>
+        </h:outputLabel>
+        <h:inputText id="txtQty" value="#{obj.qty}"/>
+        <br/>
+        <h:outputLabel for="txtPrice">
+            <h:outputText value="enter product price"/>
+        </h:outputLabel>
+        <h:inputText id="txtPrice" value="#{obj.price}"/>
+
+        <h:commandButton id="cmdInsert" value="Add item" action="#{obj.add()}"></h:commandButton>
+    </h:form>
 </h:body>
 </html>
